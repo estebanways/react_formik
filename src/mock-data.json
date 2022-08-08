@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "description": "Take out the trash"
+  },
+  {
+    "id": 2,
+    "description": "Mow the lawn"
+  },
+  {
+    "id": 3,
+    "description": "Water the plants"
+  },
+  {
+    "id": 4,
+    "description": "Feed the turtle"
+  },
+  {
+    "id": 5,
+    "description": "Swipe the floor"
+  },
+  {
+    "id": 6,
+    "description": "Do the laundry"
+  }
+]
