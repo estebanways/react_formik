@@ -15,13 +15,13 @@ const EditableRow = ({
           required="required"
           placeholder="Enter a todo..."
           name="description"
-          value={editFormData.fullName}
+          value={editFormData.description}
           onChange={handleEditFormChange}
         ></input>
       </td>
       <td>
-        {/*<button type="submit">SAVE</button>*/}
-        <TiCancelOutline type="button" onClick={handleCancelClick} />
+        <button className="controls" type="submit"> <TiInputChecked /> </button>
+        <button className="controls" type="button" onClick={handleCancelClick}> <TiCancelOutline /> </button>
       </td>
     </tr>
   );

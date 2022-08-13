@@ -7,13 +7,18 @@ const ReadOnlyRow = ({ todo, handleEditClick, handleDeleteClick }) => {
     <tr>
       <td>{todo.description}</td>
       <td>
-        <TiEdit
-          type="button"
-          onClick={(event) => handleEditClick(event, todo)}
-        />
-
-        <RiCloseCircleLine className="option-icons" type="button" onClick={() => handleDeleteClick(todo.id)}
-        />
+        <button className="controls">
+          <TiEdit
+            type="button"
+            onClick={(event) => handleEditClick(event, todo)}
+          />
+        </button>
+        <button className="controls">
+          <RiCloseCircleLine
+            type="button"
+            onClick={() => handleDeleteClick(todo.id)}
+          />
+        </button>
       </td>
     </tr>
   );

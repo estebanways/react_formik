@@ -24,6 +24,10 @@ td {
   border: 0;
 }
 
+tr {
+  border: 1px solid black;
+}
+
 form {
   display: flex;
   gap: 5px;
@@ -36,4 +40,11 @@ form td:last-child {
 
 form * {
   font-size: 18px;
+}
+
+.controls {
+  border: 0;
+  background: none;
+  width: 20%;
+  height: 20%;
 }

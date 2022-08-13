@@ -4,6 +4,7 @@ import "./App.css";
 import data from "./mock-data.json";
 import ReadOnlyRow from "./components/ReadOnlyRow";
 import EditableRow from "./components/EditableRow";
+import { MdOutlineNoteAdd } from 'react-icons/md';
 
 const App = () => {
   const [todos, setTodos] = useState(data);
@@ -108,7 +109,7 @@ const App = () => {
           placeholder="Enter a todo..."
           onChange={handleAddFormChange}
         />
-        <button type="submit">Add</button>
+        <button type="submit"> <MdOutlineNoteAdd /> </button>
       </form>
 
       <form onSubmit={handleEditFormSubmit}>
