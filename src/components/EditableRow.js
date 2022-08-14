@@ -11,6 +11,7 @@ const EditableRow = ({
     <tr>
       <td>
         <input
+        className="input-edit"
           type="text"
           required="required"
           placeholder="Enter a todo..."

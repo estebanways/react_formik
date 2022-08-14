@@ -99,50 +99,52 @@ const App = () => {
 
   return (
     <div className="app-container">
-
-      <h2>Todo List</h2>
-      <form onSubmit={handleAddFormSubmit}>
-        <input
-          type="text"
-          name="description"
-          required="required"
-          placeholder="Enter a todo..."
-          onChange={handleAddFormChange}
-        />
-        <button type="submit"> <MdOutlineNoteAdd /> </button>
-      </form>
-
-      <form onSubmit={handleEditFormSubmit}>
-        <table>
-          <thead>
-            <tr>
-              <th>Todo List</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            {todos.map((todo) => (
-              <Fragment>
-                {editTodoId === todo.id ? (
-                  <EditableRow
-                    editFormData={editFormData}
-                    handleEditFormChange={handleEditFormChange}
-                    handleCancelClick={handleCancelClick}
-                  />
-                ) : (
-                  <ReadOnlyRow
-                    todo={todo}
-                    handleEditClick={handleEditClick}
-                    handleDeleteClick={handleDeleteClick}
-                  />
-                )}
-              </Fragment>
-            ))}
-          </tbody>
-        </table>
-      </form>
-
-      
+      <div className="todo-container">
+        <div><h2>Todo App</h2></div>
+        <form onSubmit={handleAddFormSubmit}>
+          <div className="enter-todo">
+            <input
+              className="add-todo"
+              type="text"
+              name="description"
+              required="required"
+              placeholder=" Enter a todo..."
+              onChange={handleAddFormChange}
+            />
+            <span className="icon-container">
+              <button className="add-icon" type="submit"> <MdOutlineNoteAdd /> </button>
+            </span>
+          </div>
+        </form>
+        <form onSubmit={handleEditFormSubmit}>
+          <table className="todos-table">
+            <thead>
+              <tr>
+                {/* <th colSpan={2}>Todo List</th> */}
+              </tr>
+            </thead>
+            <tbody>
+              {todos.map((todo) => (
+                <Fragment>
+                  {editTodoId === todo.id ? (
+                    <EditableRow
+                      editFormData={editFormData}
+                      handleEditFormChange={handleEditFormChange}
+                      handleCancelClick={handleCancelClick}
+                    />
+                  ) : (
+                    <ReadOnlyRow
+                      todo={todo}
+                      handleEditClick={handleEditClick}
+                      handleDeleteClick={handleDeleteClick}
+                    />
+                  )}
+                </Fragment>
+              ))}
+            </tbody>
+          </table>
+        </form>
+      </div>
     </div>
   );
 };
